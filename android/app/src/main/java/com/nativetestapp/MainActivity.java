@@ -20,9 +20,9 @@ public class MainActivity extends ReactActivity {
 
   // for react-native-screens
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(null);
-  }
+protected void onCreate(Bundle savedInstanceState) {
+  super.onCreate(null);
+}
 
   // for react-native-appearance
   @Override

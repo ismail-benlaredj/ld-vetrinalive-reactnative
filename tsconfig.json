@@ -12,10 +12,10 @@
     "strict": true,
     "target": "esnext",
     "baseUrl": "./src",
-    "paths": {
-      "@/*": ["./*"],
-    }
   },
+  "include": [
+    "src/**/*","transformSvg.d.ts"
+  ],
   "exclude": [
     "node_modules",
     "babel.config.js",
