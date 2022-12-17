@@ -1,11 +1,13 @@
 import 'react-native-gesture-handler'
 import React from 'react'
-import { View, Text } from 'react-native'
+import { NativeBaseProvider, Box, Button } from "native-base";
+import { customTheme } from './theme/customTheme'
+import AuthNavigation from './navigators/AuthNavigation'
 
 const App = () => (
-  <View>
-    <Text>App</Text>
-  </View>
+  <NativeBaseProvider theme={customTheme}>
+    <AuthNavigation />
+  </NativeBaseProvider>
 )
 
 export default App
