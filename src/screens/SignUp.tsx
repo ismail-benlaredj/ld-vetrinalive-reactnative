@@ -8,7 +8,6 @@ import {
     Input,
     Stack,
     HStack,
-    Divider,
     Icon,
 } from "native-base";
 import {

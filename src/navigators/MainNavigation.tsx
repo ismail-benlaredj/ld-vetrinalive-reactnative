@@ -10,6 +10,8 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import { Text, Icon, Divider, HStack } from 'native-base';
 import { drawerItemsList } from "./drawerItems"
+import Dashboard from '../screens/Dashboard';
+
 
 import Logo from 'assets/icons/Logo.svg';
 import MenuIcon from 'assets/icons/menuIcon.svg';
@@ -24,7 +26,7 @@ export default function MainNavigation() {
                 drawerContent={props => <CustomDrawerContent {...props} />}
             >
                 {drawerItemsList.map(item => (
-                    <Drawer.Screen key={item.id} name={item.label} component={HomeScreen}
+                    <Drawer.Screen key={item.id} name={item.label} component={Dashboard}
                         options={{
                             drawerIcon: () => <Icon as={item.icon} />,
                             drawerLabel: () => <Text color="primaryText" bold>{item.label}</Text>

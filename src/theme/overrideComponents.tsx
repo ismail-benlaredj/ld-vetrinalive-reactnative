@@ -59,8 +59,40 @@ const Button = {
     },
 }
 
+
+const Text = {
+    baseStyle: {
+        fontFamily: 'SourceSansPro',
+    },
+    defaultProps: {
+        variant: 'body',
+    },
+    variants: {
+        headOne: ({ colorScheme }: any) => ({
+            fontSize: 34,
+            lineHeight: 32,
+            color: colorScheme || 'primaryText',
+        }),
+        headTwo: ({ colorScheme }: any) => ({
+            fontSize: 22,
+            lineHeight: 26,
+            color: colorScheme || 'primaryText',
+        }),
+        body: ({ colorScheme }: any) => ({
+            fontSize: 18,
+            lineHeight: 24,
+            color: colorScheme || 'primaryText',
+        }),
+        link: ({ colorScheme }: any) => ({
+            fontSize: 17,
+            lineHeight: 24,
+            color: colorScheme || 'primaryText',
+        })
+    },
+}
 const components = {
     Button,
+    Text
 }
 
 export default components
