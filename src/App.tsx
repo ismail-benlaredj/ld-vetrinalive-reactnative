@@ -3,10 +3,11 @@ import React from 'react'
 import { NativeBaseProvider, Box, Button } from "native-base";
 import { customTheme } from './theme/customTheme'
 import AuthNavigation from './navigators/AuthNavigation'
-
+import MainNavigation from './navigators/MainNavigation'
 const App = () => (
   <NativeBaseProvider theme={customTheme}>
-    <AuthNavigation />
+    {/* <AuthNavigation /> */}
+    <MainNavigation />
   </NativeBaseProvider>
 )
 
