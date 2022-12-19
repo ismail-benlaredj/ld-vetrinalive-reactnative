@@ -1,17 +1,13 @@
 import React from 'react'
 import {
     View,
-    Button,
     VStack,
-    Heading,
     Text,
-    Input,
-    Stack,
     HStack,
     Center,
     Icon,
 } from "native-base";
-import { ScrollView, StyleSheet, TouchableOpacity } from 'react-native'
+import { ScrollView, TouchableOpacity } from 'react-native'
 
 import CardLayout from '../components/CardLayout'
 import BlogCard from '../components/BlogCard'
@@ -64,7 +60,6 @@ export default function Dashboard() {
                             <Text variant="headTwo" color='error' bold >
                                 completato
                             </Text>
-
                             <Text variant="headTwo" color='secondaryText' textAlign='center' my={4}>
                                 Completa tutti i step per ricevere maggiore visibilità e una vetrina  accattivante
                             </Text>
@@ -133,8 +128,3 @@ export default function Dashboard() {
         </ScrollView >
     )
 }
-
-
-const styles = StyleSheet.create({
-
-})

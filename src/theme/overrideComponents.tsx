@@ -61,9 +61,7 @@ const Button = {
 
 
 const Text = {
-    baseStyle: {
-        fontFamily: 'SourceSansPro',
-    },
+
     defaultProps: {
         variant: 'body',
     },
@@ -86,6 +84,11 @@ const Text = {
         link: ({ colorScheme }: any) => ({
             fontSize: 17,
             lineHeight: 24,
+            color: colorScheme || 'primaryText',
+        }),
+        number: ({ colorScheme }: any) => ({
+            fontSize: 28,
+            lineHeight: 26,
             color: colorScheme || 'primaryText',
         })
     },

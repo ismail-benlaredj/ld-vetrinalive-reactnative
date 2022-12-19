@@ -11,7 +11,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Text, Icon, Divider, HStack } from 'native-base';
 import { drawerItemsList } from "./drawerItems"
 import Dashboard from '../screens/Dashboard';
-
+import Subscription from '../screens/Subscription';
 
 import Logo from 'assets/icons/Logo.svg';
 import MenuIcon from 'assets/icons/menuIcon.svg';
@@ -26,7 +26,7 @@ export default function MainNavigation() {
                 drawerContent={props => <CustomDrawerContent {...props} />}
             >
                 {drawerItemsList.map(item => (
-                    <Drawer.Screen key={item.id} name={item.label} component={Dashboard}
+                    <Drawer.Screen key={item.id} name={item.label} component={Subscription}
                         options={{
                             drawerIcon: () => <Icon as={item.icon} />,
                             drawerLabel: () => <Text color="primaryText" bold>{item.label}</Text>
