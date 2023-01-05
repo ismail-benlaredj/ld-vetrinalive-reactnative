@@ -5,12 +5,11 @@ const Button = {
         paddingHorizontal: 20,
         backgroundColor: '#ee70f7',
         _text: {
-            fontFamily: 'SourceSansPro-SemiBold',
             margin: 0,
             padding: 0,
         },
         _icon: {
-            marginRight: 14,
+            marginLeft: 14,
         },
     },
     defaultProps: {
@@ -20,6 +19,7 @@ const Button = {
     variants: {
         contained: ({ colorScheme }: any) => ({
             backgroundColor: 'primary',
+
             _text: {
                 color: 'white',
             },
@@ -29,9 +29,11 @@ const Button = {
             },
             _disabled: {
                 opacity: 1,
-                backgroundColor: '#E7E9EC',
+                backgroundColor: 'grayLight',
                 _text: {
-                    color: 'disabled',
+                    color: 'grayDark',
+                    fontWeight: "semibold",
+                    fonsSize: 16,
                 },
             },
         }),

@@ -12,6 +12,7 @@ import { Text, Icon, Divider, HStack } from 'native-base';
 import { drawerItemsList } from "./drawerItems"
 import Dashboard from '../screens/Dashboard';
 import Subscription from '../screens/Subscription';
+import OrdersNavigation from './OrdersNavigation';
 
 import Logo from 'assets/icons/Logo.svg';
 import MenuIcon from 'assets/icons/menuIcon.svg';
@@ -26,8 +27,9 @@ export default function MainNavigation() {
                 drawerContent={props => <CustomDrawerContent {...props} />}
             >
                 {drawerItemsList.map(item => (
-                    <Drawer.Screen key={item.id} name={item.label} component={Subscription}
+                    <Drawer.Screen key={item.id} name={item.label} component={OrdersNavigation}
                         options={{
+                            headerShown: false,
                             drawerIcon: () => <Icon as={item.icon} />,
                             drawerLabel: () => <Text color="primaryText" bold>{item.label}</Text>
                         }}
@@ -57,16 +59,6 @@ function DrawerHeader() {
     )
 }
 
-function HomeScreen({ navigation }: any) {
-    return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Button
-                onPress={() => navigation.navigate('Notifications')}
-                title="Go to notifications"
-            />
-        </View>
-    );
-}
 const styles = StyleSheet.create({
     headerContainer: {
         justifyContent: 'space-between',
