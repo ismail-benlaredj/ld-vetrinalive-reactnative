@@ -4,6 +4,7 @@ import { StyleSheet, TouchableOpacity } from 'react-native';
 import { Text, HStack, Icon } from 'native-base';
 
 import Orders from '../screens/Orders';
+import OrderDetails from '../screens/OrderDetails';
 
 import MenuIcon from 'assets/icons/menuIcon.svg';
 import SearchIcon from 'assets/icons/searchIcon.svg';
@@ -13,7 +14,7 @@ const Stack = createNativeStackNavigator();
 
 export default function OrdersNavigation({ navigation }: any) {
     return (
-        <Stack.Navigator initialRouteName="Orders">
+        <Stack.Navigator initialRouteName="orderDetails">
             <Stack.Screen
                 name="orders"
                 component={Orders}
@@ -37,8 +38,8 @@ export default function OrdersNavigation({ navigation }: any) {
                 }}
             />
             <Stack.Screen
-                name="OrderDetails"
-                component={Orders}
+                name="orderDetails"
+                component={OrderDetails}
                 options={{ headerShown: false }}
             />
         </Stack.Navigator>
