@@ -12,6 +12,8 @@ const palette = {
         grayDark: "#B6BEC6",
         purple: "#BE52F2",
         darkPurple: "#6979F8",
+         paperBackground: "#F8F9FB",
+    darkerPrimaryText: "#233B53",
     }
 }
 
