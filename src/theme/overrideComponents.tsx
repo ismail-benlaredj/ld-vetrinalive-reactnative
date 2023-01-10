@@ -5,12 +5,11 @@ const Button = {
         paddingHorizontal: 20,
         backgroundColor: '#ee70f7',
         _text: {
-            fontFamily: 'SourceSansPro-SemiBold',
             margin: 0,
             padding: 0,
         },
         _icon: {
-            marginRight: 14,
+            marginLeft: 14,
         },
     },
     defaultProps: {
@@ -20,6 +19,7 @@ const Button = {
     variants: {
         contained: ({ colorScheme }: any) => ({
             backgroundColor: 'primary',
+
             _text: {
                 color: 'white',
             },
@@ -29,9 +29,11 @@ const Button = {
             },
             _disabled: {
                 opacity: 1,
-                backgroundColor: '#E7E9EC',
+                backgroundColor: 'grayLight',
                 _text: {
-                    color: 'disabled',
+                    color: 'grayDark',
+                    fontWeight: "semibold",
+                    fonsSize: 16,
                 },
             },
         }),
@@ -59,8 +61,43 @@ const Button = {
     },
 }
 
+
+const Text = {
+
+    defaultProps: {
+        variant: 'body',
+    },
+    variants: {
+        headOne: ({ colorScheme }: any) => ({
+            fontSize: 34,
+            lineHeight: 32,
+            color: colorScheme || 'primaryText',
+        }),
+        headTwo: ({ colorScheme }: any) => ({
+            fontSize: 22,
+            lineHeight: 26,
+            color: colorScheme || 'primaryText',
+        }),
+        body: ({ colorScheme }: any) => ({
+            fontSize: 18,
+            lineHeight: 24,
+            color: colorScheme || 'primaryText',
+        }),
+        link: ({ colorScheme }: any) => ({
+            fontSize: 17,
+            lineHeight: 24,
+            color: colorScheme || 'primaryText',
+        }),
+        number: ({ colorScheme }: any) => ({
+            fontSize: 28,
+            lineHeight: 26,
+            color: colorScheme || 'primaryText',
+        })
+    },
+}
 const components = {
     Button,
+    Text
 }
 
 export default components
